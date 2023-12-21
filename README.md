@@ -1,5 +1,5 @@
 # Custom Image Classification Using Vision transformer
-Image Classification Using Vision transformer with pretrained weight
+Image Classification Using Vision transformer with 'timm' pretrained weight
 
 ### Steps to follow:
 #### Installation:
