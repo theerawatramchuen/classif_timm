@@ -1,5 +1,5 @@
 # Custom Image Classification Using Vision transformer
-Image Classification Using Vision transformer with 'timm' pretrained weight
+Image Classification Using Vision transformer with 'timm' pretrained weight 
 
 ### Steps to follow:
 #### Installation:
@@ -17,6 +17,6 @@ mathplotlib <br/>
 1. Unzip "dataset_ebs.zip" (for your project it is your dataset zip file with subfolder is the image class name)<br/>
 2. Run "vit_ebs_timm_gpt-4-turbo.ipynb" with editing dataset directory in the 3th cell prior run for the model training, model weight saving and prediction sample images<br/>
 #### Reference: 
-https://github.com/AarohiSingla/Image-Classification-Using-Vision-transformer <br/>
+[https://github.com/AarohiSingla/Image-Classification-Using-Vision-transformer](https://timm.fast.ai/) <br/>
 https://youtu.be/awyWND506NY <br/>
 
