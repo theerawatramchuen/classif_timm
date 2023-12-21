@@ -12,6 +12,7 @@ vit-pytorch (pip3 install vit-pytorch==1.6.4) <br/>
 timm (pip3 install timm) <br/>
 scikit-learn <br/>
 mathplotlib <br/>
+pillow <br/>
 
 #### Setup:
 1. Unzip "dataset_ebs.zip" (for your project it is your dataset zip file with subfolder is the image class name)<br/>
