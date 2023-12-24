@@ -18,6 +18,6 @@ pillow <br/>
 1. Unzip "dataset_ebs.zip" (for your project it is your dataset zip file with subfolder is the image class name)<br/>
 2. Run "vit_ebs_timm_gpt-4-turbo.ipynb" with editing dataset directory in the 2nd cell prior run for the model training, model weight saving and prediction sample images<br/>
 #### Reference: 
-[https://github.com/AarohiSingla/Image-Classification-Using-Vision-transformer](https://timm.fast.ai/) <br/>
+https://timm.fast.ai/ <br/>
 https://youtu.be/mK0CHqLCoXA?si=UXKv2XkihnrjSp0O <br/>
 
