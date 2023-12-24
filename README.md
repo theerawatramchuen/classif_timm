@@ -19,5 +19,6 @@ pillow <br/>
 2. Run "vit_ebs_timm_gpt-4-turbo.ipynb" with editing dataset directory in the 2nd cell prior run for the model training, model weight saving and prediction sample images<br/>
 #### Reference: 
 https://timm.fast.ai/ <br/>
+https://github.com/huggingface/pytorch-image-models <br/>
 https://youtu.be/mK0CHqLCoXA?si=UXKv2XkihnrjSp0O <br/>
 
