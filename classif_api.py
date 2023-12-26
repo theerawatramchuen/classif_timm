@@ -2,6 +2,7 @@ import io
 import torch
 import torchvision.transforms as transforms
 import timm
+import base64
 from PIL import Image
 from flask import Flask, request, jsonify
 
@@ -38,15 +39,47 @@ transform = transforms.Compose([
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
 ])
 
+# @app.route('/predict', methods=['POST'])
+# def predict():
+#     if 'image' not in request.files:
+#         return jsonify({'error': 'No image provided'}), 400
+
+#     image = request.files['image'].read()
+#     image = Image.open(io.BytesIO(image)).convert('RGB')
+#     image = transform(image)
+#     image = image.unsqueeze(0)
+#     image = image.to(device)
+
+#     with torch.no_grad():
+#         model.eval()
+#         outputs = model(image)
+#         probabilities = torch.nn.functional.softmax(outputs, dim=1)
+#         top_prob, top_catid = torch.max(probabilities, 1)
+
+#     predicted_class = class_names[top_catid[0]]
+#     confidence = top_prob[0].item()
+
+#     return jsonify({'class': predicted_class, 'confidence': confidence})
+
 @app.route('/predict', methods=['POST'])
 def predict():
-    if 'image' not in request.files:
-        return jsonify({'error': 'No image provided'}), 400
+    if 'image' not in request.json:
+        return jsonify({'error': 'No image data provided'}), 400
 
-    image = request.files['image'].read()
-    image = Image.open(io.BytesIO(image)).convert('RGB')
+    # Decode the base64 image
+    base64_image = request.json['image']
+    image_data = base64.b64decode(base64_image)
+    image = Image.open(io.BytesIO(image_data)).convert('RGB')
+
+    # Apply the same transformations as you used during training
+    transform = transforms.Compose([
+        transforms.Resize((224, 224)),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+    ])
+
     image = transform(image)
-    image = image.unsqueeze(0)
+    image = image.unsqueeze(0)  # Add batch dimension
     image = image.to(device)
 
     with torch.no_grad():

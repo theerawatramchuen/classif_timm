@@ -1,31 +1,26 @@
-
-# import requests
-# import os
-
-# def send_image(image_path, url):
-#     with open(image_path, 'rb') as image_file:
-#         response = requests.post(url, files={'image': image_file})
-#     return response.json()
-
-# def send_images_in_folder(folder_path, url):
-#     for root, dirs, files in os.walk(folder_path):
-#         for file in files:
-#             if file.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif')):
-#                 image_path = os.path.join(root, file)
-#                 response = send_image(image_path, url)
-#                 print(f"Response for {image_path}: {response}")
-
-# url = 'http://localhost:5000/predict'  # Replace with your Flask app's URL
-# folder_path = 'datset_ebs/rejects/'#'path/to/your/folder'  # Path to your folder containing images
-
-# send_images_in_folder(folder_path, url)
-
 import requests
+import base64
+import json
 
-url = 'http://localhost:5000/predict'  # Replace with your Flask app's URL
-image_path = 'f:/vit_timm/dataset_ebs/rejects/R-029.jpg'  # Path to your image file
+def encode_image_to_base64(image_path):
+    with open(image_path, "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read()).decode('utf-8')
+    return encoded_string
 
-with open(image_path, 'rb') as image_file:
-    response = requests.post(url, files={'image': image_file})
+def send_encoded_image(image_path, url):
+    encoded_image = encode_image_to_base64(image_path)
+    payload = json.dumps({"image": encoded_image})
+    headers = {'Content-Type': 'application/json'}
+    response = requests.post(url, data=payload, headers=headers)
+    return response.json()
 
-print(response.json())
+# URL of your Flask API
+url = 'http://localhost:5000/predict'  # Replace with your actual URL
+
+# Path to your image file
+image_path = 'f:/vit_timm/dataset_ebs/rejects/R-029.jpg'  # Replace with the path to your image
+
+# Send the image and print the response
+response = send_encoded_image(image_path, url)
+print(response)
+
