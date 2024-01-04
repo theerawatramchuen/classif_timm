@@ -8,11 +8,9 @@ version is working for CPU or [GPU] <br/>
 Python 3.8 <br/>
 torchvision 0.16.1 (pip3 install torchvision==0.16.1) <br/>
 torch 2.1.1 or [torch 2.1.1+cu121] (https://pytorch.org/get-started/locally/) <br/>
-Remark no need --> vit-pytorch (pip3 install vit-pytorch==1.6.4) <br/>
 timm (pip3 install timm) <br/>
 scikit-learn <br/>
 mathplotlib <br/>
-Remark no need --> pillow <br/>
 
 #### Installation optional for API:
 flask <br/>
