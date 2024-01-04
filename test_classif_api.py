@@ -18,7 +18,7 @@ def send_encoded_image(image_path, url):
 url = 'http://localhost:5000/predict'  # Replace with your actual URL
 
 # Path to your image file
-image_path = 'f:/vit_timm/dataset_ebs/rejects/R-028.jpg'  # Replace with the path to your image
+image_path = 'f:/classif_timm/dataset_ebs/rejects/R-028.jpg'  # Replace with the path to your image
 
 # Send the image and print the response
 response = send_encoded_image(image_path, url)

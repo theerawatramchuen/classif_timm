@@ -18,12 +18,12 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 device
 
 # Replace this with the path to your trained model
-model_path = 'dataset_ebs/model_20231226_062812.pth'  # 'path/to/your/model.pth'
+model_path = 'dataset_ebs/model_20240104_152542.pth'  # 'path/to/your/model.pth'
 
 # Replace this with the list of class names
-class_names = ['goods', 'rejects']  # ['class1', 'class2', 'class3']
+class_names = ['goods', 'rejects']  #  ['class1', 'class2', 'class3']
 
-mypretrainedname = 'efficientvit_b0' #Put one of the model name listed in previous cell
+mypretrainedname = 'vit_tiny_patch16_224' #Put one of the model name listed in previous cell
 
 # Load pre-trained ViT model with specified dropout rate
 model = timm.create_model(mypretrainedname, pretrained=True, num_classes=2, drop_rate=0.0)
