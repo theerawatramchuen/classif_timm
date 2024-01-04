@@ -1,4 +1,4 @@
-# Custom Image Classification Using Vision transformer
+# Image Classification Using Vision transformer or other model with 'timm' pretrained weight
 Image Classification Using Vision transformer or various other model with 'timm' pretrained weight 
 
 ### Steps to follow:
