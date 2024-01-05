@@ -12,16 +12,16 @@ timm (pip3 install timm) <br/>
 scikit-learn <br/>
 mathplotlib <br/>
 
-#### Installation optional for API:
-flask <br/>
-opencv-python <br/>
+#### Installation (optional for image classification API):
+flask (pip3 install flask) <br/>
+opencv-python (pip3 install opencv-python) <br/>
 
 #### Setup:
 1. Unzip "dataset_ebs.zip" (for your project it is your dataset zip file with subfolder is the image class name)<br/>
 2. Run "vit_ebs_timm_gpt-4-turbo.ipynb" with editing dataset directory in the 2nd cell prior run for the model training, model weight saving and prediction sample images<br/>
-#### Running for API:
-3. Open new terminal and Run "python classif_api.py" <br/>
-4. Open new terminal and Run "python test_classif_api.py" <br/>
+#### Running API mode:
+1. Open new terminal and Run "python classif_api.py" <br/>
+2. Open new terminal and Run "python test_classif_api.py" <br/>
 #### Reference: 
 https://timm.fast.ai/ <br/>
 https://github.com/huggingface/pytorch-image-models <br/>
