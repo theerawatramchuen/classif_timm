@@ -17,8 +17,8 @@ flask (pip3 install flask) <br/>
 opencv-python (pip3 install opencv-python) <br/>
 
 #### Setup for demo code on EBS dataset:
-1. Unzip "dataset_ebs.zip" (for your project it is your dataset zip file with subfolder is the image class name)<br/>
-2. Run "vit_ebs_timm_gpt-4-turbo.ipynb" with editing dataset directory in the 2nd cell prior run for the model training, model weight saving and prediction sample images<br/>
+1. Unzip "dataset_ebs.zip" <br/>
+2. Run "vit_ebs_timm_gpt-4-turbo.ipynb" for the model training, model weight saving and prediction sample images<br/>
 
 #### Running training and inferencing with other pretrained weight model which listed in the 8th cell
 1. Open "timm_classif.ipynp" with Jupyter notebook <br/>
