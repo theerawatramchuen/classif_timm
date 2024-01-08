@@ -28,6 +28,7 @@ opencv-python (pip3 install opencv-python) <br/>
 5. Define pretrained weight model in the 9th cell <br>
 
 #### Running demo API mode:
+Make sure flask and opencv-python packages are installed in the python environment.
 1. Open new terminal and Run "python classif_api.py" <br/>
 2. Open new terminal and Run "python test_classif_api.py" <br/>
 #### Reference: 
