@@ -16,9 +16,13 @@ mathplotlib <br/>
 flask (pip3 install flask) <br/>
 opencv-python (pip3 install opencv-python) <br/>
 
-#### Setup:
+#### Setup for demo EBS dataset:
 1. Unzip "dataset_ebs.zip" (for your project it is your dataset zip file with subfolder is the image class name)<br/>
 2. Run "vit_ebs_timm_gpt-4-turbo.ipynb" with editing dataset directory in the 2nd cell prior run for the model training, model weight saving and prediction sample images<br/>
+
+#### Running training and inferencing with other model
+1. run "timm_classif.ipnp" <br/>
+2. revise
 #### Running API mode:
 1. Open new terminal and Run "python classif_api.py" <br/>
 2. Open new terminal and Run "python test_classif_api.py" <br/>
