@@ -27,7 +27,7 @@ opencv-python (pip3 install opencv-python) <br/>
 4. Define Data augmentation and normalization for training in the 4th cell <br/>
 5. Define pretrained weight model in the 9th cell <br>
 
-#### Running API mode:
+#### Running demo API mode:
 1. Open new terminal and Run "python classif_api.py" <br/>
 2. Open new terminal and Run "python test_classif_api.py" <br/>
 #### Reference: 
