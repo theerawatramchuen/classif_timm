@@ -21,7 +21,7 @@ opencv-python (pip3 install opencv-python) <br/>
 2. Run "vit_ebs_timm_gpt-4-turbo.ipynb" with editing dataset directory in the 2nd cell prior run for the model training, model weight saving and prediction sample images<br/>
 
 #### Running training and inferencing with other pretrained weight model which listed in the 8th cell
-1. open "timm_classif.ipynp" with Jupyter notebook <br/>
+1. Open "timm_classif.ipynp" with Jupyter notebook <br/>
 2. Define dataset folder in the 2nd cell <br/>
 3. Define training hyper parameters in the 3rd cell <br/>
 4. Define Data augmentation and normalization for training in the 4th cell <br/>
